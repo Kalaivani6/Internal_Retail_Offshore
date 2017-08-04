@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" configfailurepolicy="continue" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Build Test]" parallel="tests">
+  <listeners>
+    <listener class-name="com.framework.wrapper.WebDriverListener"/>
+  </listeners>
+  <test name="Build_Test(failed)" parallel="tests">
+    <parameter name="environment" value="preprod"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="exeMode" value="local"/>
+    <classes>
+      <class name="com.retail.testng.runners.BuildTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="initializeSuite"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.retail.testng.runners.BuildTest -->
+    </classes>
+  </test> <!-- Build_Test(failed) -->
+</suite> <!-- Failed suite [Build Test] -->
